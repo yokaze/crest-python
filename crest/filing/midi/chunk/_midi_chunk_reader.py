@@ -13,7 +13,7 @@ from ._midi_chunk import MidiChunk
 class MidiChunkReader:
     def __init__(self, input):
         if (input is None):
-            raise ValueError(b'input should be a non-null I/O object.')
+            raise ValueError('input should be a non-null I/O object.')
         self._input = input
 
     def ReadChunk(self):

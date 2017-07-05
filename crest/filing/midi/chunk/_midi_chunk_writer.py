@@ -13,7 +13,7 @@ from ._midi_chunk import MidiChunk
 class MidiChunkWriter:
     def __init__(self, output):
         if (output is None):
-            raise ValueError(b'output should be a non-null I/O object.')
+            raise ValueError('output should be a non-null I/O object.')
         self._output = output
 
     def WriteChunk(self, chunk):
