@@ -6,7 +6,7 @@
 #   Distributed under the MIT License.
 #
 import io
-from .. import chunk
+from ..chunk._midi_chunk_reader import MidiChunkReader
 from ._midi_file_data import MidiFileData
 from ._midi_file_header import MidiFileHeader
 from ._midi_track_reader import MidiTrackReader
@@ -19,7 +19,7 @@ class MidiFileReader(object):
         self._input = input
 
     def Read(self):
-        mcr = chunk.MidiChunkReader(self._input)
+        mcr = MidiChunkReader(self._input)
         chunks = mcr.Read()
         if (chunks is None):
             return None

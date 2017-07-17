@@ -6,7 +6,7 @@
 #   Distributed under the MIT License.
 #
 import struct
-from .. import chunk
+from ..chunk._midi_chunk import MidiChunk
 
 
 class MidiFileHeader(object):
@@ -29,7 +29,7 @@ class MidiFileHeader(object):
                               self._trackCount,
                               self._resolution)
 
-        return chunk.MidiChunk(b'MThd', content)
+        return MidiChunk(b'MThd', content)
 
     def _GetFormat(self):
         return self._format

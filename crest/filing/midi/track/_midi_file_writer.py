@@ -6,7 +6,8 @@
 #   Distributed under the MIT License.
 #
 import io
-from .. import chunk
+from ..chunk._midi_chunk import MidiChunk
+from ..chunk._midi_chunk_writer import MidiChunkWriter
 from ._midi_file_data import MidiFileData
 from ._midi_track_writer import MidiTrackWriter
 
@@ -14,7 +15,7 @@ from ._midi_track_writer import MidiTrackWriter
 class MidiFileWriter(object):
     def __init__(self, output):
         self._output = output
-        self._mcw = chunk.MidiChunkWriter(output)
+        self._mcw = MidiChunkWriter(output)
 
     def Write(self, fileData):
         if (not isinstance(fileData, MidiFileData)):
@@ -26,7 +27,7 @@ class MidiFileWriter(object):
             mtw = MidiTrackWriter(buffer)
             mtw.Write(track)
             buffer.seek(0)
-            self._mcw.WriteChunk(chunk.MidiChunk(b'MTrk', buffer.read()))
+            self._mcw.WriteChunk(MidiChunk(b'MTrk', buffer.read()))
 
     def _GetOutput(self):
         return self._output
