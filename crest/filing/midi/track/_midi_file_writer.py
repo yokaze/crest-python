@@ -11,7 +11,7 @@ from ._midi_file_data import MidiFileData
 from ._midi_track_writer import MidiTrackWriter
 
 
-class MidiFileWriter:
+class MidiFileWriter(object):
     def __init__(self, output):
         self._output = output
         self._mcw = chunk.MidiChunkWriter(output)

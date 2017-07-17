@@ -10,7 +10,7 @@ import struct
 from ._midi_chunk import MidiChunk
 
 
-class MidiChunkWriter:
+class MidiChunkWriter(object):
     def __init__(self, output):
         if (output is None):
             raise ValueError('output should be a non-null I/O object.')

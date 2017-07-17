@@ -9,7 +9,7 @@ import struct
 from .. import chunk
 
 
-class MidiFileHeader:
+class MidiFileHeader(object):
     def __init__(self, format, trackCount, resolution):
         if ((format < 0) or (3 <= format)):
             raise ValueError('format should be zero, one or two.')

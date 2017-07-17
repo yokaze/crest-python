@@ -7,7 +7,7 @@
 #
 
 
-class MidiFileEvent:
+class MidiFileEvent(object):
     def __init__(self, tick, message):
         self._tick = int(tick)
         self._message = message

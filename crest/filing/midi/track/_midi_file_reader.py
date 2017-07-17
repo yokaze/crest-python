@@ -12,7 +12,7 @@ from ._midi_file_header import MidiFileHeader
 from ._midi_track_reader import MidiTrackReader
 
 
-class MidiFileReader:
+class MidiFileReader(object):
     def __init__(self, input):
         if (input is None):
             raise ValueError('input should be a non-null I/O object.')

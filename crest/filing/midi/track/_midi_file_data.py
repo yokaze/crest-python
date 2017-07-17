@@ -7,7 +7,7 @@
 #
 
 
-class MidiFileData:
+class MidiFileData(object):
     def __init__(self, header, tracks):
         self._header = header
         self._tracks = tracks

@@ -10,7 +10,7 @@ import struct
 from ._midi_file_event import MidiFileEvent
 
 
-class MidiTrackReader:
+class MidiTrackReader(object):
     def __init__(self, input):
         if (input is None):
             raise ValueError('input should be a non-null I/O object.')

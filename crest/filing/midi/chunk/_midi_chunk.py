@@ -7,7 +7,7 @@
 #
 
 
-class MidiChunk:
+class MidiChunk(object):
     def __init__(self, chunkType, content):
         if ((chunkType != b'MThd') and (chunkType != b'MTrk')):
             raise ValueError('chunkType should be MThd or MTrk.')

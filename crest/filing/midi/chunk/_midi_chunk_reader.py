@@ -10,7 +10,7 @@ import struct
 from ._midi_chunk import MidiChunk
 
 
-class MidiChunkReader:
+class MidiChunkReader(object):
     def __init__(self, input):
         if (input is None):
             raise ValueError('input should be a non-null I/O object.')

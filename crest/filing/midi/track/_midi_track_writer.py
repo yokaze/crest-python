@@ -9,7 +9,7 @@ import io
 import struct
 
 
-class MidiTrackWriter:
+class MidiTrackWriter(object):
     def __init__(self, output):
         if (output is None):
             raise ValueError('output should be a non-null I/O object.')
