@@ -7,6 +7,7 @@
 #
 import io
 import struct
+import warnings
 from ._midi_file_event import MidiFileEvent
 
 
@@ -75,7 +76,8 @@ class MidiTrackReader(object):
             while (len(msg) < 2):
                 msg.append(self._ReadByte())
             if (0x80 <= msg[1]):
-                raise ValueError('Invalid two-bytes message found.')
+                warnings.warn('Invalid two-bytes message found: %s' % str(msg), Warning)
+                msg[1] = msg[1] if (msg[1] <= 0x7F) else 0x7F
         elif (status in [MIDI_STATUS_NOTE_OFF,
                          MIDI_STATUS_NOTE_ON,
                          MIDI_STATUS_POLYPHONIC_PRESSURE,
@@ -84,7 +86,9 @@ class MidiTrackReader(object):
             while (len(msg) < 3):
                 msg.append(self._ReadByte())
             if ((0x80 <= msg[1]) or (0x80 <= msg[2])):
-                raise ValueError('Invalid three-bytes message found.')
+                warnings.warn('Invalid three-bytes message found: %s' % str(msg), Warning)
+                msg[1] = msg[1] if (msg[1] <= 0x7F) else 0x7F
+                msg[2] = msg[2] if (msg[2] <= 0x7F) else 0x7F
         elif (msg[0] == MIDI_STATUS_META):
             while (len(msg) < 3):
                 msg.append(self._ReadByte())
