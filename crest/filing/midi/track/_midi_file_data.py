@@ -9,14 +9,14 @@
 
 class MidiFileData(object):
     def __init__(self, header, tracks):
-        self._header = header
-        self._tracks = tracks
+        self.__header = header
+        self.__tracks = tracks
 
-    def _GetHeader(self):
-        return self._header
+    def __GetHeader(self):
+        return self.__header
 
-    def _GetTracks(self):
-        return self._tracks
+    def __GetTracks(self):
+        return self.__tracks
 
-    Header = property(_GetHeader)
-    Tracks = property(_GetTracks)
+    Header = property(__GetHeader)
+    Tracks = property(__GetTracks)

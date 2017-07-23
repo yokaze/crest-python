@@ -19,30 +19,30 @@ class MidiFileHeader(object):
             raise ValueError('trackCound should be positive.')
         if (resolution < 0):
             raise ValueError('resolution should be positive.')
-        self._format = int(format)
-        self._trackCount = int(trackCount)
-        self._resolution = int(resolution)
+        self.__format = int(format)
+        self.__trackCount = int(trackCount)
+        self.__resolution = int(resolution)
 
     def CreateChunk(self):
         content = struct.pack('>HHH',
-                              self._format,
-                              self._trackCount,
-                              self._resolution)
+                              self.__format,
+                              self.__trackCount,
+                              self.__resolution)
 
         return MidiChunk(b'MThd', content)
 
-    def _GetFormat(self):
-        return self._format
+    def __GetFormat(self):
+        return self.__format
 
-    def _GetTrackCount(self):
-        return self._trackCount
+    def __GetTrackCount(self):
+        return self.__trackCount
 
-    def _GetResolution(self):
-        return self._resolution
+    def __GetResolution(self):
+        return self.__resolution
 
-    Format = property(_GetFormat)
-    TrackCount = property(_GetTrackCount)
-    Resolution = property(_GetResolution)
+    Format = property(__GetFormat)
+    TrackCount = property(__GetTrackCount)
+    Resolution = property(__GetResolution)
 
     @staticmethod
     def CreateFromBytes(content):

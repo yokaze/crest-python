@@ -9,14 +9,14 @@
 
 class MidiFileEvent(object):
     def __init__(self, tick, message):
-        self._tick = int(tick)
-        self._message = message
+        self.__tick = int(tick)
+        self.__message = message
 
-    def _GetTick(self):
-        return self._tick
+    def __GetTick(self):
+        return self.__tick
 
-    def _GetMessage(self):
-        return self._message
+    def __GetMessage(self):
+        return self.__message
 
-    Tick = property(_GetTick)
-    Message = property(_GetMessage)
+    Tick = property(__GetTick)
+    Message = property(__GetMessage)

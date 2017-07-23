@@ -14,25 +14,25 @@ class MidiChunkWriter(object):
     def __init__(self, output):
         if (output is None):
             raise ValueError('output should be a non-null I/O object.')
-        self._output = output
+        self.__output = output
 
     def WriteChunk(self, chunk):
         if (not isinstance(chunk, MidiChunk)):
             raise ValueError('Input should be a MidiChunk.')
 
-        self._output.write(chunk.ChunkType)
+        self.__output.write(chunk.ChunkType)
         bChunkLength = struct.pack('>I', len(chunk.Content))
-        self._output.write(bChunkLength)
-        self._output.write(chunk.Content)
+        self.__output.write(bChunkLength)
+        self.__output.write(chunk.Content)
 
     def Write(self, chunks):
         for chunk in chunks:
             self.WriteChunk(chunk)
 
-    def _GetOutput(self):
-        return self._output
+    def __GetOutput(self):
+        return self.__output
 
-    Output = property(_GetOutput)
+    Output = property(__GetOutput)
 
     @staticmethod
     def CreateWithBytesIO():

@@ -14,15 +14,15 @@ class MidiChunkReader(object):
     def __init__(self, input):
         if (input is None):
             raise ValueError('input should be a non-null I/O object.')
-        self._input = input
+        self.__input = input
 
     def ReadChunk(self):
         if self.ReachEnd():
             return None
         else:
-            chunkType = self._ReadChunkType()
-            chunkLength = self._ReadChunkLength()
-            chunkContent = self._input.read(chunkLength)
+            chunkType = self.__ReadChunkType()
+            chunkLength = self.__ReadChunkLength()
+            chunkContent = self.__input.read(chunkLength)
             return MidiChunk(chunkType, chunkContent)
 
     def Read(self):
@@ -32,23 +32,23 @@ class MidiChunkReader(object):
         return ret if (0 < len(ret)) else None
 
     def ReachEnd(self):
-        offset = self._input.tell()
-        self._input.read(1)
-        ret = (offset == self._input.tell())
-        self._input.seek(offset)
+        offset = self.__input.tell()
+        self.__input.read(1)
+        ret = (offset == self.__input.tell())
+        self.__input.seek(offset)
         return ret
 
-    def _ReadChunkType(self):
-        return self._input.read(4)
+    def __ReadChunkType(self):
+        return self.__input.read(4)
 
-    def _ReadChunkLength(self):
-        x = self._input.read(4)
+    def __ReadChunkLength(self):
+        x = self.__input.read(4)
         return struct.unpack('>I', x)[0]
 
-    def _GetInput(self):
-        return self._input
+    def __GetInput(self):
+        return self.__input
 
-    Input = property(_GetInput)
+    Input = property(__GetInput)
 
     @staticmethod
     def CreateFromBytes(content):

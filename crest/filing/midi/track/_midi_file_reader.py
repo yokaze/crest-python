@@ -16,10 +16,10 @@ class MidiFileReader(object):
     def __init__(self, input):
         if (input is None):
             raise ValueError('input should be a non-null I/O object.')
-        self._input = input
+        self.__input = input
 
     def Read(self):
-        mcr = MidiChunkReader(self._input)
+        mcr = MidiChunkReader(self.__input)
         chunks = mcr.Read()
         if (chunks is None):
             return None

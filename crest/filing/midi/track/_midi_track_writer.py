@@ -13,8 +13,8 @@ class MidiTrackWriter(object):
     def __init__(self, output):
         if (output is None):
             raise ValueError('output should be a non-null I/O object.')
-        self._output = output
-        self._tick = 0
+        self.__output = output
+        self.__tick = 0
 
     def Write(self, events):
         if (events is None):
@@ -23,14 +23,14 @@ class MidiTrackWriter(object):
             self.WriteEvent(evt)
 
     def WriteEvent(self, evt):
-        delta = evt.Tick - self._tick
+        delta = evt.Tick - self.__tick
         if (delta < 0):
             raise ValueError('events have been supplied with inverse time order.')
-        self._WriteDeltaTime(delta)
-        self._WriteMessage(evt.Message)
-        self._tick = evt.Tick
+        self.__WriteDeltaTime(delta)
+        self.__WriteMessage(evt.Message)
+        self.__tick = evt.Tick
 
-    def _WriteDeltaTime(self, delta):
+    def __WriteDeltaTime(self, delta):
         li = []
         while True:
             li.append(delta & 0x7F)
@@ -42,16 +42,16 @@ class MidiTrackWriter(object):
             li[i] |= 0x80
 
         for b in li:
-            self._output.write(struct.pack('>B', b))
+            self.__output.write(struct.pack('>B', b))
 
-    def _WriteMessage(self, msg):
+    def __WriteMessage(self, msg):
         for b in msg:
-            self._output.write(struct.pack('>B', b))
+            self.__output.write(struct.pack('>B', b))
 
-    def _GetOutput(self):
-        return self._output
+    def __GetOutput(self):
+        return self.__output
 
-    Output = property(_GetOutput)
+    Output = property(__GetOutput)
 
     @staticmethod
     def CreateWithBytesIO():

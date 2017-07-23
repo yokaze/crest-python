@@ -14,25 +14,25 @@ from ._midi_track_writer import MidiTrackWriter
 
 class MidiFileWriter(object):
     def __init__(self, output):
-        self._output = output
-        self._mcw = MidiChunkWriter(output)
+        self.__output = output
+        self.__mcw = MidiChunkWriter(output)
 
     def Write(self, fileData):
         if (not isinstance(fileData, MidiFileData)):
             raise ValueError('Argument should be a MidiFileData.')
 
-        self._mcw.WriteChunk(fileData.Header.CreateChunk())
+        self.__mcw.WriteChunk(fileData.Header.CreateChunk())
         for track in fileData.Tracks:
             buffer = io.BytesIO()
             mtw = MidiTrackWriter(buffer)
             mtw.Write(track)
             buffer.seek(0)
-            self._mcw.WriteChunk(MidiChunk(b'MTrk', buffer.read()))
+            self.__mcw.WriteChunk(MidiChunk(b'MTrk', buffer.read()))
 
-    def _GetOutput(self):
-        return self._output
+    def __GetOutput(self):
+        return self.__output
 
-    Output = property(_GetOutput)
+    Output = property(__GetOutput)
 
     @staticmethod
     def CreateWithBytesIO():

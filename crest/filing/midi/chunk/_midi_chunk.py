@@ -16,14 +16,14 @@ class MidiChunk(object):
         if ((chunkType == b'MThd') and (len(content) != 6)):
             raise ValueError('MThd chunk should consists of six bytes.')
 
-        self._chunkType = chunkType
-        self._content = content
+        self.__chunkType = chunkType
+        self.__content = content
 
-    def _GetChunkType(self):
-        return self._chunkType
+    def __GetChunkType(self):
+        return self.__chunkType
 
-    def _GetContent(self):
-        return self._content
+    def __GetContent(self):
+        return self.__content
 
-    ChunkType = property(_GetChunkType)
-    Content = property(_GetContent)
+    ChunkType = property(__GetChunkType)
+    Content = property(__GetContent)
