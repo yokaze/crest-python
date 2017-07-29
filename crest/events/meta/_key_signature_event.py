@@ -1,5 +1,5 @@
 #
-#   _key_signature.py
+#   _key_signature_event.py
 #   crest-python
 #
 #   Copyright (C) 2017 Rue Yokaze
