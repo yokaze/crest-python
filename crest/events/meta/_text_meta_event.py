@@ -10,6 +10,7 @@ import array
 import codecs
 import platform
 
+
 class TextMetaEvent(MetaEvent):
     def __init__(self, text=None, encoding='ascii'):
         super(TextMetaEvent, self).__init__()

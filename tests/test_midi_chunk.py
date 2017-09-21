@@ -34,5 +34,6 @@ class TestMidiChunk(unittest.TestCase):
         chunk = MidiChunk(b'MTrk', b'1234')
         self.assertEqual(chunk.Content, b'1234')
 
+
 if (__name__ == '__main__'):
     unittest.main()

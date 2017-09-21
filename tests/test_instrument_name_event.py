@@ -20,5 +20,6 @@ class TestInstrumentNameEvent(unittest.TestCase):
         evt = InstrumentNameEvent('Test')
         self.assertEqual(evt.Message, [0xFF, 0x04, 0x04, 0x54, 0x65, 0x73, 0x74])
 
+
 if (__name__ == '__main__'):
     unittest.main()

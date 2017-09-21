@@ -15,5 +15,6 @@ class TestAbstractMidiEvent(unittest.TestCase):
         with self.assertRaises(TypeError):
             AbstractMidiEvent()
 
+
 if (__name__ == '__main__'):
     unittest.main()

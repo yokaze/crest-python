@@ -15,5 +15,6 @@ class TestMetaEvent(unittest.TestCase):
         with self.assertRaises(TypeError):
             MetaEvent()
 
+
 if (__name__ == '__main__'):
     unittest.main()

@@ -37,5 +37,6 @@ class TestMidiEvent(unittest.TestCase):
         evt = MidiEvent()
         self.assertEqual(evt.Message, None)
 
+
 if (__name__ == '__main__'):
     unittest.main()

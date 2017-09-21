@@ -29,5 +29,6 @@ class TestKeySignatureEvent(unittest.TestCase):
         self.assertEqual(evt.SharpNumber, 3)
         self.assertEqual(evt.IsMinor, True)
 
+
 if (__name__ == '__main__'):
     unittest.main()

@@ -61,5 +61,6 @@ class TestThreeBytesEvent(unittest.TestCase):
         evt = ControlEvent(1, 2)
         self.assertEqual(evt.Message, [0xB0, 1, 2])
 
+
 if (__name__ == '__main__'):
     unittest.main()

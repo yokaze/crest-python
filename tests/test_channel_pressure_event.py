@@ -26,5 +26,6 @@ class TestChannelPressureEvent(unittest.TestCase):
         evt.Value = 7
         self.assertEqual(evt.Parameter, 7)
 
+
 if (__name__ == '__main__'):
     unittest.main()

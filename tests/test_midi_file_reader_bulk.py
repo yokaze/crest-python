@@ -22,5 +22,6 @@ class TestMidiFileReaderBulk(unittest.TestCase):
                     mfr = MidiFileReader(fp)
                     mfr.Read()
 
+
 if (__name__ == '__main__'):
     unittest.main()

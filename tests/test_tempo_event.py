@@ -30,5 +30,6 @@ class TestTempoEvent(unittest.TestCase):
         self.assertEqual(evt.Tempo, 240)
         self.assertEqual(evt.MicroSeconds, 250000)
 
+
 if (__name__ == '__main__'):
     unittest.main()

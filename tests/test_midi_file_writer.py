@@ -48,5 +48,6 @@ class TestMidiFileWriter(unittest.TestCase):
         content = file_io.read()
         self.assertEqual(_test, content)
 
+
 if (__name__ == '__main__'):
     unittest.main()

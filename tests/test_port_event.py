@@ -19,5 +19,6 @@ class TestPortEvent(unittest.TestCase):
         evt = PortEvent(4)
         self.assertEqual(evt.Message, [0xFF, 0x21, 0x01, 0x04])
 
+
 if (__name__ == '__main__'):
     unittest.main()

@@ -41,5 +41,6 @@ class TestConvertResult(unittest.TestCase):
         self.assertTrue(isinstance(cr.Events, list))
         self.assertTrue(isinstance(cr.Events[0], NoteOnEvent))
 
+
 if (__name__ == '__main__'):
     unittest.main()

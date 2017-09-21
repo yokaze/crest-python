@@ -43,5 +43,6 @@ class TestTwoBytesEvent(unittest.TestCase):
         evt = ProgramEvent(7)
         self.assertEqual(evt.Message, [0xC0, 7])
 
+
 if (__name__ == '__main__'):
     unittest.main()

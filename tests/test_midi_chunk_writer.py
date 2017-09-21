@@ -48,5 +48,6 @@ class TestMidiChunkWriter(unittest.TestCase):
             self.assertEqual(chunk.ChunkType, b'MTrk')
             self.assertEqual(chunk.Content, chunk_content_bytes)
 
+
 if (__name__ == '__main__'):
     unittest.main()

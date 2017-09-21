@@ -19,6 +19,7 @@ from crest.events.factory import ConvertResult
 from crest.events.factory import SingleEventFactory
 from crest.events.meta import EndOfTrackEvent
 
+
 class TestSingleEventFactory(unittest.TestCase):
     def test_ctor(self):
         SingleEventFactory()
@@ -78,6 +79,7 @@ class TestSingleEventFactory(unittest.TestCase):
         factory = SingleEventFactory()
         cr = factory.Input(0, [0xFF, 0x2F, 0x00])
         self.assertTrue(isinstance(cr.Events[0], EndOfTrackEvent))
+
 
 if (__name__ == '__main__'):
     unittest.main()

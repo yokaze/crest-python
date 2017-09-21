@@ -22,5 +22,6 @@ class TestMidiChunkReaderBulk(unittest.TestCase):
                     mcr = MidiChunkReader(fp)
                     mcr.Read()
 
+
 if (__name__ == '__main__'):
     unittest.main()

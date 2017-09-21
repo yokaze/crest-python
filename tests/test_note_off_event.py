@@ -31,5 +31,6 @@ class TestNoteOffEvent(unittest.TestCase):
         self.assertEqual(evt.Parameter1, 96)
         self.assertEqual(evt.Parameter2, 100)
 
+
 if (__name__ == '__main__'):
     unittest.main()

@@ -16,5 +16,6 @@ class TestMidiFileEvent(unittest.TestCase):
         self.assertEqual(evt.Tick, 100)
         self.assertEqual(evt.Message, [1, 2, 3, 4])
 
+
 if (__name__ == '__main__'):
     unittest.main()

@@ -41,5 +41,6 @@ class TestMidiFileReader(unittest.TestCase):
         self.assertEqual(data.Header.Resolution, 480)
         self.assertEqual(len(data.Tracks), 2)
 
+
 if (__name__ == '__main__'):
     unittest.main()

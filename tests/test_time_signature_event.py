@@ -31,5 +31,6 @@ class TestTimeSignatureEvent(unittest.TestCase):
         with self.assertRaises(Exception):
             evt.Note = 7
 
+
 if (__name__ == '__main__'):
     unittest.main()

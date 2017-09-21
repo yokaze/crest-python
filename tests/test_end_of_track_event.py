@@ -18,5 +18,6 @@ class TestEndOfTrackEvent(unittest.TestCase):
         evt = EndOfTrackEvent()
         self.assertEqual(evt.Message, [0xFF, 0x2F, 0x00])
 
+
 if (__name__ == '__main__'):
     unittest.main()

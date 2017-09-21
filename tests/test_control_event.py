@@ -31,5 +31,6 @@ class TestControlEvent(unittest.TestCase):
         self.assertEqual(evt.Parameter1, 7)
         self.assertEqual(evt.Parameter2, 15)
 
+
 if (__name__ == '__main__'):
     unittest.main()

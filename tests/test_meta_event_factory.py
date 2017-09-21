@@ -112,5 +112,6 @@ class TestMetaEventFactory(unittest.TestCase):
         self.assertEqual(msg.EventNumber, 0x7E)
         self.assertEqual(msg.Content, [0x00, 0x01, 0x02])
 
+
 if (__name__ == '__main__'):
     unittest.main()

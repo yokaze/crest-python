@@ -114,5 +114,6 @@ class TestMidiTrackReader(unittest.TestCase):
         self.assertEqual(events[1].Tick, (1 << 14) + (1 << 7))
         self.assertEqual(events[1].Message, [0x80, 0x40, 0x40])
 
+
 if (__name__ == '__main__'):
     unittest.main()

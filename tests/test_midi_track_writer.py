@@ -49,5 +49,6 @@ class TestMidiTrackWriter(unittest.TestCase):
         with self.assertRaises(Exception):
             mtw.WriteEvent(MidiFileEvent(200, [0x90, 0x40, 0x40]))
 
+
 if (__name__ == '__main__'):
     unittest.main()

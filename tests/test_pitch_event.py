@@ -28,5 +28,6 @@ class TestPitchEvent(unittest.TestCase):
         self.assertEqual(evt.Parameter2, 0x18)
         self.assertEqual(evt.Value, -1000)
 
+
 if (__name__ == '__main__'):
     unittest.main()

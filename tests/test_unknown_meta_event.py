@@ -23,5 +23,6 @@ class TestUnknownMetaEvent(unittest.TestCase):
         evt = UnknownMetaEvent(1, [0x01, 0x02, 0x03])
         self.assertEqual(evt.Message, [0xFF, 0x01, 0x03, 0x01, 0x02, 0x03])
 
+
 if (__name__ == '__main__'):
     unittest.main()

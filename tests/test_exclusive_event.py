@@ -15,5 +15,6 @@ class TestExclusiveEvent(unittest.TestCase):
         evt = ExclusiveEvent([0xF0, 0x01, 0x02, 0x03, 0x04, 0xF7])
         self.assertEqual(evt.Message, [0xF0, 0x01, 0x02, 0x03, 0x04, 0xF7])
 
+
 if (__name__ == '__main__'):
     unittest.main()

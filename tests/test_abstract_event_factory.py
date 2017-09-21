@@ -15,5 +15,6 @@ class TestAbstractEventFactory(unittest.TestCase):
         with self.assertRaises(TypeError):
             AbstractEventFactory()
 
+
 if (__name__ == '__main__'):
     unittest.main()

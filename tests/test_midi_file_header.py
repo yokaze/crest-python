@@ -45,5 +45,6 @@ class TestMidiFileHeader(unittest.TestCase):
         self.assertEqual(header.TrackCount, 16)
         self.assertEqual(header.Resolution, 480)
 
+
 if (__name__ == '__main__'):
     unittest.main()
