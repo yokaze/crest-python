@@ -5,7 +5,7 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from ._meta_event import MetaEvent
+from crest.events.meta._meta_event import MetaEvent
 
 
 class TempoEvent(MetaEvent):

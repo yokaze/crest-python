@@ -5,10 +5,11 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from ._meta_event import MetaEvent
 import array
 import codecs
 import platform
+
+from crest.events.meta._meta_event import MetaEvent
 
 
 class TextMetaEvent(MetaEvent):

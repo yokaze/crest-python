@@ -5,7 +5,7 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from ._text_meta_event import TextMetaEvent
+from crest.events.meta._text_meta_event import TextMetaEvent
 
 
 class TrackNameEvent(TextMetaEvent):

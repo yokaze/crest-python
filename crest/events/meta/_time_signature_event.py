@@ -7,7 +7,7 @@
 #
 import math
 
-from ._meta_event import MetaEvent
+from crest.events.meta._meta_event import MetaEvent
 
 
 class TimeSignatureEvent(MetaEvent):
