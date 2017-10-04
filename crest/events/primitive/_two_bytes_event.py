@@ -7,7 +7,7 @@
 #
 import abc
 
-from .._midi_event import MidiEvent
+from crest.events._midi_event import MidiEvent
 
 
 class TwoBytesEvent(MidiEvent):
