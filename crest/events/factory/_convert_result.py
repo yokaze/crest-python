@@ -5,7 +5,7 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from .._abstract_midi_event import AbstractMidiEvent
+from crest.events._abstract_midi_event import AbstractMidiEvent
 
 
 class ConvertResult(object):

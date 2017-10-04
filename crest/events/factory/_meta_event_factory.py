@@ -9,20 +9,20 @@ import array
 import codecs
 import platform
 
-from ..meta._copyright_event import CopyrightEvent
-from ..meta._end_of_track_event import EndOfTrackEvent
-from ..meta._instrument_name_event import InstrumentNameEvent
-from ..meta._key_signature_event import KeySignatureEvent
-from ..meta._lyric_event import LyricEvent
-from ..meta._marker_event import MarkerEvent
-from ..meta._port_event import PortEvent
-from ..meta._tempo_event import TempoEvent
-from ..meta._text_event import TextEvent
-from ..meta._time_signature_event import TimeSignatureEvent
-from ..meta._track_name_event import TrackNameEvent
-from ..meta._unknown_meta_event import UnknownMetaEvent
-from ._abstract_event_factory import AbstractEventFactory
-from ._convert_result import ConvertResult
+from crest.events.factory._abstract_event_factory import AbstractEventFactory
+from crest.events.factory._convert_result import ConvertResult
+from crest.events.meta._copyright_event import CopyrightEvent
+from crest.events.meta._end_of_track_event import EndOfTrackEvent
+from crest.events.meta._instrument_name_event import InstrumentNameEvent
+from crest.events.meta._key_signature_event import KeySignatureEvent
+from crest.events.meta._lyric_event import LyricEvent
+from crest.events.meta._marker_event import MarkerEvent
+from crest.events.meta._port_event import PortEvent
+from crest.events.meta._tempo_event import TempoEvent
+from crest.events.meta._text_event import TextEvent
+from crest.events.meta._time_signature_event import TimeSignatureEvent
+from crest.events.meta._track_name_event import TrackNameEvent
+from crest.events.meta._unknown_meta_event import UnknownMetaEvent
 
 
 class MetaEventFactory(AbstractEventFactory):
