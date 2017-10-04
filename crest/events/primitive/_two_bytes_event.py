@@ -6,6 +6,7 @@
 #   Distributed under the MIT License.
 #
 import abc
+
 from .._midi_event import MidiEvent
 
 

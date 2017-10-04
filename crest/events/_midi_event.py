@@ -5,8 +5,9 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from ._abstract_midi_event import AbstractMidiEvent
 import abc
+
+from ._abstract_midi_event import AbstractMidiEvent
 
 
 class MidiEvent(AbstractMidiEvent):

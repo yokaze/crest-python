@@ -6,6 +6,7 @@
 #   Distributed under the MIT License.
 #
 import io
+
 from ..chunk._midi_chunk_reader import MidiChunkReader
 from ._midi_file_data import MidiFileData
 from ._midi_file_header import MidiFileHeader

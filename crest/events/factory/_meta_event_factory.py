@@ -8,8 +8,7 @@
 import array
 import codecs
 import platform
-from ._abstract_event_factory import AbstractEventFactory
-from ._convert_result import ConvertResult
+
 from ..meta._copyright_event import CopyrightEvent
 from ..meta._end_of_track_event import EndOfTrackEvent
 from ..meta._instrument_name_event import InstrumentNameEvent
@@ -22,6 +21,8 @@ from ..meta._text_event import TextEvent
 from ..meta._time_signature_event import TimeSignatureEvent
 from ..meta._track_name_event import TrackNameEvent
 from ..meta._unknown_meta_event import UnknownMetaEvent
+from ._abstract_event_factory import AbstractEventFactory
+from ._convert_result import ConvertResult
 
 
 class MetaEventFactory(AbstractEventFactory):

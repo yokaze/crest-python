@@ -6,6 +6,7 @@
 #   Distributed under the MIT License.
 #
 import struct
+
 from ..chunk._midi_chunk import MidiChunk
 
 

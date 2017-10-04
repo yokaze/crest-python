@@ -6,6 +6,7 @@
 #   Distributed under the MIT License.
 #
 import math
+
 from ._meta_event import MetaEvent
 
 

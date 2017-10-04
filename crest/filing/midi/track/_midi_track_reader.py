@@ -8,6 +8,7 @@
 import io
 import struct
 import warnings
+
 from ._midi_file_event import MidiFileEvent
 
 

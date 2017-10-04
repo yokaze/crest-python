@@ -5,9 +5,6 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from ._abstract_event_factory import AbstractEventFactory
-from ._convert_result import ConvertResult
-from ._meta_event_factory import MetaEventFactory
 from .._channel_pressure_event import ChannelPressureEvent
 from .._control_event import ControlEvent
 from .._exclusive_event import ExclusiveEvent
@@ -16,6 +13,9 @@ from .._note_off_event import NoteOffEvent
 from .._note_on_event import NoteOnEvent
 from .._pitch_event import PitchEvent
 from .._program_event import ProgramEvent
+from ._abstract_event_factory import AbstractEventFactory
+from ._convert_result import ConvertResult
+from ._meta_event_factory import MetaEventFactory
 
 
 class SingleEventFactory(AbstractEventFactory):

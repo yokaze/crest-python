@@ -7,6 +7,7 @@
 #
 import io
 import struct
+
 from ._midi_chunk import MidiChunk
 
 
