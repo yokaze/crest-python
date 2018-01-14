@@ -7,10 +7,10 @@
 #
 import io
 
-from ..chunk._midi_chunk_reader import MidiChunkReader
-from ._midi_file_data import MidiFileData
-from ._midi_file_header import MidiFileHeader
-from ._midi_track_reader import MidiTrackReader
+from crest.filing.midi.chunk._midi_chunk_reader import MidiChunkReader
+from crest.filing.midi.track._midi_file_data import MidiFileData
+from crest.filing.midi.track._midi_file_header import MidiFileHeader
+from crest.filing.midi.track._midi_track_reader import MidiTrackReader
 
 
 class MidiFileReader(object):

@@ -7,7 +7,7 @@
 #
 import struct
 
-from ..chunk._midi_chunk import MidiChunk
+from crest.filing.midi.chunk._midi_chunk import MidiChunk
 
 
 class MidiFileHeader(object):

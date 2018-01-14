@@ -8,7 +8,7 @@
 import io
 import struct
 
-from ._midi_chunk import MidiChunk
+from crest.filing.midi.chunk._midi_chunk import MidiChunk
 
 
 class MidiChunkWriter(object):

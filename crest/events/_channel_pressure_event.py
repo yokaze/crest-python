@@ -5,7 +5,7 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from .primitive._two_bytes_event import TwoBytesEvent
+from crest.events.primitive._two_bytes_event import TwoBytesEvent
 
 
 class ChannelPressureEvent(TwoBytesEvent):

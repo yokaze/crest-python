@@ -9,7 +9,7 @@ import io
 import struct
 import warnings
 
-from ._midi_file_event import MidiFileEvent
+from crest.filing.midi.track._midi_file_event import MidiFileEvent
 
 
 class MidiTrackReader(object):

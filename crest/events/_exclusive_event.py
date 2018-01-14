@@ -5,7 +5,7 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from ._midi_event import MidiEvent
+from crest.events._midi_event import MidiEvent
 
 
 class ExclusiveEvent(MidiEvent):

@@ -5,7 +5,7 @@
 #   Copyright (C) 2017 Rue Yokaze
 #   Distributed under the MIT License.
 #
-from .primitive._three_bytes_event import ThreeBytesEvent
+from crest.events.primitive._three_bytes_event import ThreeBytesEvent
 
 
 class NoteOnEvent(ThreeBytesEvent):
